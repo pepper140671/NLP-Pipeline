@@ -17,7 +17,10 @@ text = """Toulon est une commune du Sud-Est de la France, chef-lieu du départem
     de la rade de Toulon. Ses habitants sont appelés les Toulonnais.
     """
 
-doc = nlp(text) # doc contient une verion analysée ('parse') du texte.
+doc = nlp(text) # doc contient une version parsée (analyse syntaxique) du texte.
+                # nlp(text) constructeur d'un objet de class nlp aussi appelé 'doc'
 
+# Demonstration of Name Entity Recognition = NER
 for entity in doc.ents:
-    print(f"{entity.text} ({entity.label})")
+    print(f"{entity.text} ({entity.label_})") #https://cito.github.io/blog/f-strings/
+
